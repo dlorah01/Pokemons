@@ -1,0 +1,17 @@
+<div class="container custom-container-2">
+  <h1>Pokémon</h1>
+  <h4>Haz click en uno de ellos para saber mas.</h4>
+
+  <!-- Employees list table, it hides when there is no employee -->
+  <div *ngIf="Pokemons.length !== 0">
+    <div class="col-md-12">
+    	<div class="element" routerLink="/pokemon-detail/{{pokemon.name}}" *ngFor="let pokemon of Pokemons; let i = index">
+        <h2>{{i+1}}</h2>
+        <h5 >{{pokemon.name}}</h5>
+        <h6 >Pokemon # {{i+1}}</h6>
+    	</div>
+    </div>
+
+  </div>
+
+</div>
